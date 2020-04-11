@@ -127,6 +127,7 @@
 								  	</li>
 								</ul>
 								<div class="tab-content" id="pills-tabContent">
+									<!-- TAB FORMULARIO 1010 (INICIO) -->
 						  			<div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
 							  			<hr>
 							  			<input type="hidden" class="form-control" id="productosCategoria" name="productosCategoria" value="Vehiculos">
@@ -212,7 +213,170 @@
 					                        </div>
 					                    </div>
 					            	</div>
+					            	<!-- TAB FORMULARIO 1010 (FINAL) -->
+					            	
+					            	<!-- TAB FORMULARIO REGISTRO INCAPACIDAD (INICIO) -->
 					            	<div class="tab-pane fade" id="pills-trueque" role="tabpanel" aria-labelledby="pills-profile-tab">
+										<hr>
+										<div class="row" align="left">
+											<div class="form-group col-lg-9 col-xs-9 border-right">
+												<div class="row" align="left">
+													<div class="form-group col-lg-12 col-xs-12">
+														<table id="dtBasicExample" align="center" class="table table-striped table-bordered" cellspacing="0" style="width:90%">
+															<thead>
+														        <tr>
+														            <th class="th-sm"><h6>RUC Entidad Emisora</h6></th>
+														            <th class="th-sm"><h6>Colegiatura</h6></th>
+														            <th class="th-sm"><h6>Nombre</h6></th>
+														            <th class="th-sm"><h6>Fecha Emisión</h6></th>
+														            <th class="th-sm"><h6>Periodo Inicio</h6></th>
+														            <th class="th-sm"><h6>Periodo Fin</h6></th>
+														            <th class="th-sm"><h6>Cantidad Días</h6></th>
+														        </tr>
+															</thead>
+														    <tbody>
+														        <tr>
+														            <td contenteditable="true" />
+														            <td contenteditable="true"/>
+														            <td contenteditable="true"/>
+														            <td contenteditable="true"/>
+														            <td contenteditable="true"/>
+														            <td contenteditable="true"/>
+														            <td contenteditable="true"/>
+														            <td><a href="#!" class="text-success"><i class="fas fa-plus fa-2x" aria-hidden="true"></i></a></td>
+														        </tr>
+															</tbody>
+														</table>									
+													</div>												
+												</div>
+												<div class="row" align="left">
+													<div class="form-group col-lg-1 col-xs-1"></div>
+													<div class="form-group col-lg-4 col-xs-4">
+														<label for="inputRUCEmpleadorIncapacidad">RUC Empleador:</label>
+							                            <input type="text" class="form-control" 
+							                               	id="inputRUCEmpleadorIncapacidad" name="inputRUCEmpleadorIncapacidad">
+													</div>
+													<div class="form-group col-lg-4 col-xs-4">
+														<label for="inputMontoSubsidiarIncapacidad">Monto a subsidiar:</label>
+							                            <input type="number" class="form-control" 
+							                               	id="inputMontoSubsidiarIncapacidad" name="inputMontoSubsidiarIncapacidad">
+													</div>
+												</div>
+												<div class="row" align="left">
+													<div class="form-group col-lg-1 col-xs-1"></div>
+													<div class="form-group col-lg-4 col-xs-4">
+														<label for="inputCITTIncapacidad">CITT (21vo día a subsidiar):</label>
+							                            <input type="text" class="form-control" 
+							                               	id="inputCITTIncapacidad" name="inputCITTIncapacidad">
+													</div>
+												</div>
+											</div>
+											<div class="form-group col-lg-3 col-xs-3 text-center">
+												<br>
+					                        	<button id='btnRegistrar' type="submit" class="btn btn-primary">Adjuntar sustento</button>
+											</div>
+										</div>
+									</div>
+									<!-- TAB FORMULARIO REGISTRO INCAPACIDAD (FINAL) -->
+									
+									<!-- TAB SEPELIO (INICIO) -->
+									<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-profile-tab">
+										<hr>
+										<div class="row" align="left">
+											<div class="form-group col-lg-3 col-xs-3 border-right">
+					                	   		<div class="row" align="center">
+					                	   			<div class="form-group col-lg-12 col-xs-12">
+					                	   				<h6>DATOS DEL TITULAR FALLECIDO</h6>
+					                	   			</div>
+					                	   		</div>
+					                	   		<div class="row" align="left">
+					                	   			<div class="form-group col-lg-1 col-xs-1"></div>
+					                	   			<div class="form-group col-lg-10 col-xs-10">
+						                	   			<label for="inputFechaFallecimiento">Fecha de Fallecimiento:</label>
+						                            	<input type="date" class="form-control" id="inputFechaFallecimiento" name="inputFechaFallecimiento">
+					                            	</div>
+					                	   		</div>
+					                	   		<div class="row" align="left">
+					                	   			<div class="form-group col-lg-1 col-xs-1"></div>
+					                	   			<div class="form-group col-lg-10 col-xs-10">
+						                	   			<label for="inputRucUltimoEmpleadorFallec">RUC Último Empleador:</label>
+						                            	<input type="text" class="form-control" id="inputRucUltimoEmpleadorFallec" name="inputRucUltimoEmpleadorFallec">
+					                            	</div>
+					                	   		</div>
+					                	   		<div class="row" align="left">
+					                	   			<div class="form-group col-lg-1 col-xs-1"></div>
+					                	   			<div class="form-group col-lg-3 col-xs-3">
+						                	   			<label for="selectTipoDocEmpleadorFallec">Tipo:</label>
+						                            	<select class="form-control" id="selectTipoDocEmpleadorFallec" name="selectTipoDocEmpleadorFallec" required>
+															<option value="DNI">DNI</option>
+															<option value="RUC">RUC</option>
+															<option value="C.E.">Carnet de Extranjería</option>
+														</select>
+					                            	</div>
+					                            	<div class="form-group col-lg-7 col-xs-7">
+						                	   			<label for="inputNumeroDocEmpleadorFallec">Número Documento:</label>
+						                            	<input type="text" class="form-control" id="inputNumeroDocEmpleadorFallec" name="inputNumeroDocEmpleadorFallec">
+					                            	</div>
+					                            </div>
+					                            <div class="row" align="left">
+					                	   			<div class="form-group col-lg-1 col-xs-1"></div>
+					                	   			<div class="form-group col-lg-10 col-xs-10">
+						                	   			<label for="inputMontoSubsidioFallec">Monto a subsidiar:</label>
+						                            	<input type="number" class="form-control" id="inputMontoSubsidioFallec" name="inputMontoSubsidioFallec">
+					                            	</div>
+					                            </div>
+					                	   	</div>
+					                	   	<div class="form-group col-lg-6 col-xs-6 border-right">
+					                	   		<div class="row" align="left">
+					                	   			<div class="form-group col-lg-1 col-xs-1"></div>
+					                	   			<div class="form-group col-lg-10 col-xs-10">
+					                	   				<h6>DATOS BENEFICIARIO</h6>
+					                	   			</div>
+					                	   		</div>
+					                	   		<div class="row" align="left">
+					                	   			<div class="form-group col-lg-1 col-xs-1"></div>
+					                	   			<div class="form-group col-lg-2 col-xs-2">
+						                	   			<label for="selectTipoDocFallec">Tipo:</label>
+						                            	<select class="form-control" id="selectTipoDocFallec" name="selectTipoDocFallec" required>
+															<option value="DNI">DNI</option>
+															<option value="RUC">RUC</option>
+															<option value="C.E.">Carnet de Extranjería</option>
+														</select>
+					                            	</div>
+					                            	<div class="form-group col-lg-3 col-xs-3">
+						                	   			<label for="inputNumeroDocFallec">Número Documento:</label>
+						                            	<input type="text" class="form-control" id="inputNumeroDocFallec" name="inputNumeroDocFallec">
+					                            	</div>
+					                            	<div class="form-group col-lg-5 col-xs-5">
+						                	   			<label for="inputNombreBenefFallec">Nombre:</label>
+						                            	<input type="text" class="form-control" id="inputNombreBenefFallec" name="inputNombreBenefFallec">
+					                            	</div>
+					                	   		</div>
+					                	   		<div class="row" align="left">
+					                	   			<div class="form-group col-lg-1 col-xs-1"></div>
+					                	   			<div class="form-group col-lg-5 col-xs-5">
+						                	   			<label for="selectParentescoFallec">Parentesco:</label>
+						                            	<select class="form-control" id="selectParentescoFallec" name="selectParentescoFallec" required>
+															<option value="Conyuge">Cónyuge</option>
+															<option value="Concubina">Concubina</option>
+														</select>
+					                            	</div>
+					                            	<div class="form-group col-lg-5 col-xs-5">
+						                	   			<label for="inputNumeroCertDefuncion">Número Certificado de Defunción:</label>
+						                            	<input type="text" class="form-control" id="inputNumeroCertDefuncion" name="inputNumeroCertDefuncion">
+					                            	</div>
+					                	   		</div>
+					                	   	</div>
+					                	   	<div class="form-group col-lg-3 col-xs-3 text-center">
+						                	   	<br>
+					                        	<button id='btnRegistrar' type="submit" class="btn btn-primary">Adjuntar sustento</button>
+					                	   	</div>
+					               		</div>
+									</div>
+									<!-- TAB SEPELIO (FINAL) -->
+									
+									<!-- TAB FORMULARIO 1010 (INICIO) -->
+									<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
 										<hr>
 										<div class="row" align="left">
 											<div class="form-group col-lg-3 col-xs-3 border-right">
@@ -305,12 +469,7 @@
 					                        </div>
 										</div>
 									</div>
-									<div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-profile-tab">
-										<hr>
-									</div>
-									<div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-										<hr>
-									</div>
+									<!-- TAB FORMULARIO 1010 (FINAL) -->
 					            </div>
 					        </div>
 	                	</div>
