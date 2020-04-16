@@ -37,6 +37,8 @@
 									<option value="DNI">DNI</option>
 									<option value="RUC">RUC</option>
 									<option value="C.E.">Carnet de Extranjería</option>
+									<option value="PTP">PTP</option>
+									<option value="Pasaporte">Pasaporte</option>
 								</select>
 							</div>							
 							<div class="form-group col-lg-3 col-xs-3">
@@ -142,7 +144,7 @@
 					                            <select class="form-control" id="selectPersonalTratante" name="selectPersonalTratante">
 													<option value="Medico">Médico</option>
 													<option value="Odontologo">Odontólogo</option>
-													<option value="Obstetriz">Obstetriz</option>
+													<option value="Obstetra">Obstetra</option>
 												</select>
 					                        </div>
 					                        <div class="form-group col-lg-3 col-xs-3">
@@ -162,7 +164,14 @@
 					                    <div class="row" align="left">
 					                	   	<div class="form-group col-lg-4 col-xs-4">
 					                	   		<label for="selectContingencia">Contingencia:</label>
-					                            <select class="form-control" id="selectContingencia" name="selectContingencia">
+					                            <select class="form-control" id="selectContingencia" name="selectContingencia"
+					                            onchange=
+					                            	"var valueContingencia=document.getElementById('selectContingencia').value;
+					                            	 if(valueContingencia=='Maternidad'||valueContingencia=='Parto multiple'){
+					                            	 	document.getElementById('inputFechaParto').disabled=false;
+					                            	 }else{
+					                            	 	document.getElementById('inputFechaParto').disabled=true;
+					                            	 }" >
 													<option value="Enfermedad comun">Enfermedad común</option>
 													<option value="Accidente comun">Accidente común</option>
 													<option value="Accidente de trabajo">Accidente de trabajo</option>
@@ -177,23 +186,47 @@
 					                        </div>
 					                        <div class="form-group col-lg-2 col-xs-2">
 					                	   		<label for="inputPeriodoDesde">Periodo a Validar(Desde):</label>
-					                            <input type="date" class="form-control" 
-					                               	id="inputPeriodoDesde" name="inputPeriodoDesde">
+					                            <input type="date" class="form-control" id="inputPeriodoDesde" name="inputPeriodoDesde"
+					                            onchange=
+					                            	"var inputPeriodoDesde=document.getElementById('inputPeriodoDesde').value;
+					                            	 var inputPeriodoHasta=document.getElementById('inputPeriodoHasta').value;
+					                            	 if(inputPeriodoDesde==''||inputPeriodoHasta==''){
+					                            	 	return false;
+					                            	 }else{
+														  m1 = new Date(inputPeriodoDesde);
+														  m2 = new Date(inputPeriodoHasta);
+														  r1 = m1.getTime()
+														  r2 = m2.getTime()
+														  r = r2-r1;
+					                            	 }
+					                            	 document.getElementById('inputDiasCanje').value=(Math.round(r/(1000*60*60*24)));" >
 					                        </div>
 					                        <div class="form-group col-lg-2 col-xs-2">
 					                	   		<label for="inputPeriodoHasta">Periodo a Validar(Hasta)</label>
-					                            <input type="date" class="form-control" 
-					                               	id="inputPeriodoHasta" name="inputPeriodoHasta">
+					                            <input type="date" class="form-control" id="inputPeriodoHasta" name="inputPeriodoHasta"
+					                            onchange=
+					                            	"var inputPeriodoDesde=document.getElementById('inputPeriodoDesde').value;
+					                            	 var inputPeriodoHasta=document.getElementById('inputPeriodoHasta').value;
+					                            	 if(inputPeriodoDesde==''||inputPeriodoHasta==''){
+					                            	 	return false;
+					                            	 }else{
+														  m1 = new Date(inputPeriodoDesde);
+														  m2 = new Date(inputPeriodoHasta);
+														  r1 = m1.getTime()
+														  r2 = m2.getTime()
+														  r = r2-r1;
+					                            	 }
+					                            	 document.getElementById('inputDiasCanje').value=(Math.round(r/(1000*60*60*24)));" >
 					                        </div>
 					                        <div class="form-group col-lg-2 col-xs-2">
 					                	   		<label for="inputDiasCanje">Cantidad de días a canjear:</label>
 					                            <input type="text" class="form-control" 
-					                               	id="inputDiasCanje" name="inputDiasCanje">
+					                               	id="inputDiasCanje" name="inputDiasCanje" disabled>
 					                        </div>
 					                        <div class="form-group col-lg-2 col-xs-2">
 					                	   		<label for="inputFechaParto">Fecha probable parto:</label>
 					                            <input type="date" class="form-control" 
-					                               	id="inputFechaParto" name="inputFechaParto">
+					                               	id="inputFechaParto" name="inputFechaParto" disabled>
 					                        </div>
 					                    </div>
 					                    <div class="row" align="left">
@@ -311,6 +344,8 @@
 															<option value="DNI">DNI</option>
 															<option value="RUC">RUC</option>
 															<option value="C.E.">Carnet de Extranjería</option>
+															<option value="PTP">PTP</option>
+															<option value="Pasaporte">Pasaporte</option>
 														</select>
 					                            	</div>
 					                            	<div class="form-group col-lg-7 col-xs-7">
@@ -341,6 +376,8 @@
 															<option value="DNI">DNI</option>
 															<option value="RUC">RUC</option>
 															<option value="C.E.">Carnet de Extranjería</option>
+															<option value="PTP">PTP</option>
+															<option value="Pasaporte">Pasaporte</option>
 														</select>
 					                            	</div>
 					                            	<div class="form-group col-lg-3 col-xs-3">
