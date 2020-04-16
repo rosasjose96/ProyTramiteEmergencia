@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.administrador.entities.TramiteEmergenciaEntity;
+import com.administrador.models.TramiteEmergenciaModel;
 
 @Controller
 public class TramiteEmergenciaController {
@@ -17,7 +17,8 @@ public class TramiteEmergenciaController {
         return "principal";
 	}
 	@RequestMapping("/cargaDocumentos")
-    public String cargaDocumentos(Model model, TramiteEmergenciaEntity tramiteEmergenciaEntity) {
+    public String cargaDocumentos(Model model, TramiteEmergenciaModel tramiteEmergenciaModel) {
+		
 		return "cargaDocumentos";
 	}
 }
